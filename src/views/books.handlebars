@@ -1,0 +1,52 @@
+<h1>Livros Listados:</h1>
+
+<div class="books-container">
+  <a href="/" class="link">Adicionar livro</a>
+
+  {{#if books}}
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Título</th>
+          <th>Páginas</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {{#each books}}
+          <tr>
+            <td>
+              #{{this.id}}
+            </td>
+            
+            <td>
+              <a href="/books/{{this.id}}" class="bold link">{{this.title}}</a>
+            </td>
+
+            <td>
+              {{this.pages}} páginas
+            </td>
+
+            <td>
+              <div class="actions">
+                <a href="/books/edit/{{this.id}}">
+                  <i class="ph-pencil-simple-line-bold link action-button"></i>
+                </a>
+
+                <form action="/books/{{this.id}}/remove" method="POST" class="remove-form">
+                  <label for="delete">              
+                    <i class="ph-trash-bold remove-button action-button"></i>
+                  </label>
+
+                  <input type="submit" id="delete" hidden />
+                </form>
+              </div>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{/if}}
+</div>

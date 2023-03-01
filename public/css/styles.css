@@ -1,0 +1,133 @@
+* {
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.save-button {
+  padding: .8em 1.8em;
+  border: none;
+  border-radius: .6em;
+  background-color: rgb(25, 189, 115);
+
+  color: white;
+  cursor: pointer;
+}
+
+#navbar {
+  border-bottom: 1px solid #CCC;
+  padding: 1em;
+}
+
+#navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 1em;
+}
+
+h1 {
+  margin-block: 1em;
+  text-align: center;
+}
+
+.form,
+.books-container {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .5em;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: .3em;
+}
+
+.form-control input {
+  padding: 5px;
+}
+
+.remove-button {
+  color: rgb(189, 25, 74);
+  cursor: pointer;
+}
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 5px;
+}
+
+td .actions {
+  justify-content: end;
+  margin-right: .5em;
+  gap: .5em;
+}
+
+.books-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.books-container table thead th {
+  text-align: start;
+}
+
+.books-container table thead th,
+.books-container table tbody td {
+  border-bottom: 1px solid #CCC;
+  padding: 6px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.link {
+  color: rgb(25, 112, 189);
+}
+
+.action-button {
+  font-size: 1.2em;
+}
+
+.remove-form {
+  display: inline;
+  margin-left: .3em;
+}
+
+/* BOOK */ 
+
+#book-page {
+  padding: 2em;
+}
+
+#book-page .container {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.container .actions {
+  margin-top: 1em;
+}
+
+.actions form input {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgb(189, 25, 74);
+  font-size: 16px;
+}
